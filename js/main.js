@@ -9,7 +9,7 @@ $('.menu').on('click', function() {
 $('.nav a').on('click', function() {
   $('.menu').removeClass('active');
   $('.overlay').removeClass('menu-open');
-  $('body').removeClass('hide-overflow');
+  $('.site-wrap').removeClass('hide-overflow');
   $('.back-to-top').removeClass('hide-content');
 });
 
