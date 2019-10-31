@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-html,body, .site-wrap
+html, body, .site-wrap
 {
     width: 100%;
     margin: 0px;
@@ -15,10 +15,6 @@ html,body, .site-wrap
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
-}
-
-.site-wrap {
-  overflow-x: hidden;
 }
 
 :root {
