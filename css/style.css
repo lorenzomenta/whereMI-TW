@@ -116,6 +116,7 @@ a {
   border-radius: 3px;
   cursor: pointer;
   display: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .back-to-top .bar1 {
@@ -179,7 +180,7 @@ header {
 }
 
 /* Header - Nav Toggle */
-.menu{
+.menu {
   padding: 2rem 2.5rem;
   position: fixed;
   top: 3rem;
@@ -188,6 +189,7 @@ header {
   z-index: 999;
   border-radius: 3px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .menu .bar,
