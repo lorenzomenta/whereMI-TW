@@ -12,10 +12,13 @@ html,body, .site-wrap
     width: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
+}
+
+.site-wrap {
+  overflow-x: hidden;
 }
 
 :root {

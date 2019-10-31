@@ -1,7 +1,7 @@
 $('.menu').on('click', function() {
   $(this).toggleClass('active');
   $('.overlay').toggleClass('menu-open');
-  $('.site-wrap').toggleClass('hide-overflow');
+  $('body').toggleClass('hide-overflow');
   $('.back-to-top').toggleClass('hide-content');
 });
 
