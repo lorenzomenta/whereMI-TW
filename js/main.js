@@ -1,7 +1,7 @@
 $('.menu').on('click', function() {
   $(this).toggleClass('active');
   $('.overlay').toggleClass('menu-open');
-  $('.body-wrap').toggleClass('hide-overflow');
+  $('body').toggleClass('hide-overflow');
   $('.back-to-top').toggleClass('hide-content');
 });
 
@@ -9,7 +9,7 @@ $('.menu').on('click', function() {
 $('.nav a').on('click', function() {
   $('.menu').removeClass('active');
   $('.overlay').removeClass('menu-open');
-  $('.body-wrap').removeClass('hide-overflow');
+  $('body').removeClass('hide-overflow');
   $('.back-to-top').removeClass('hide-content');
 });
 
