@@ -44,7 +44,6 @@ a {
 /* Reusable classes */
 .hide-overflow {
   overflow: hidden;
-  padding-right: 17px; /* Avoid width reflow */
 }
 
 .hide-content {
