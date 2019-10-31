@@ -16,6 +16,7 @@ html,body
     overflow-x: hidden;
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -113,7 +114,7 @@ a {
   bottom: 3rem;
   right: 4rem;
   background-color: rgba(0,0,0,.5);
-  z-index: 99;
+  z-index: 999;
   border-radius: 3px;
   cursor: pointer;
   display: none;
