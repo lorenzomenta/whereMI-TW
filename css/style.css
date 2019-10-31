@@ -132,7 +132,7 @@ a {
   top: 0;
   left: 0;
   right: 1.8rem;
-  bottom: 0;
+  bottom: .2rem;
   margin: auto;
   transition: 650ms;
   transform: rotate(-45deg);
@@ -147,6 +147,36 @@ a {
   top: 0;
   left: 1.8rem;
   right: 0;
+  bottom: .2rem;
+  margin: auto;
+  transition: 650ms;
+  transform: rotate(45deg);
+}
+
+.back-to-top .bar3 {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 1.55rem;
+  background-color: var(--main-white);
+  top: 1.2rem;
+  left: 0;
+  right: 1rem;
+  bottom: 0;
+  margin: auto;
+  transition: 650ms;
+  transform: rotate(-45deg);
+}
+
+.back-to-top .bar4 {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 1.55rem;
+  background-color: var(--main-white);
+  top: 1.2rem;
+  left: 1rem;
+  right: 0;
   bottom: 0;
   margin: auto;
   transition: 650ms;
@@ -154,15 +184,39 @@ a {
 }
 
 .active-top .bar1 {
-  transform: rotate(0deg);
-  transform: scale(.6);
-  background-color: transparent;
+  height: 2px;
+  width: 1.55rem;
+  top: 1.2rem;
+  left: 0;
+  right: 1rem;
+  bottom: 0;
 }
 
 .active-top .bar2 {
-  transform: rotate(0deg);
-  transform: scale(.6);
-  background-color: transparent;
+  height: 2px;
+  width: 1.55rem;
+  top: 1.2rem;
+  left: 1rem;
+  right: 0;
+  bottom: 0;
+}
+
+.active-top .bar3 {
+  height: 2px;
+  width: 2.65rem;
+  top: 0;
+  left: 0;
+  right: 1.8rem;
+  bottom: .2rem;
+}
+
+.active-top .bar4 {
+  height: 2px;
+  width: 2.65rem;
+  top: 0;
+  left: 1.8rem;
+  right: 0;
+  bottom: .2rem;
 }
 
 .active-top {
