@@ -278,6 +278,7 @@ header {
 
 .nav .overlay ul li {
   text-transform: uppercase;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav .overlay ul li a {
