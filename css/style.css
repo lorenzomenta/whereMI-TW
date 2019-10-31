@@ -13,6 +13,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 :root {
   --main-font-color: #f2b632;
   --main-white: #fff;
@@ -38,6 +42,15 @@ a {
 }
 
 /* Reusable classes */
+.hide-overflow {
+  overflow: hidden;
+  padding-right: 17px; /* Avoid width reflow */
+}
+
+.hide-content {
+  visibility: hidden;
+}
+
 .btn {
   display: inline-block;
   transition: all 650ms;
