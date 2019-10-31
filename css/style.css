@@ -127,7 +127,7 @@ a {
   content: "";
   position: absolute;
   height: 2px;
-  width: 2.6rem;
+  width: 2.65rem;
   background-color: var(--main-white);
   top: 0;
   left: 0;
@@ -142,7 +142,7 @@ a {
   content: "";
   position: absolute;
   height: 2px;
-  width: 2.6rem;
+  width: 2.65rem;
   background-color: var(--main-white);
   top: 0;
   left: 1.8rem;
