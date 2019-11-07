@@ -417,10 +417,10 @@ header {
 }
 
 /* Section - Our Services Browser */
-.store{
+.store1{
   width: 100%;
   min-height: 30rem;
-  background: url("../images/store.jpg") center no-repeat;
+  background: url("../images/store1.jpg") center no-repeat;
   background-size: cover;
 }
 
@@ -432,15 +432,11 @@ header {
   background-size: cover;
 }
 /* Section - Our Services Editor */
-.image-group {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-}
-
-.image-group img {
+.store2{
   width: 100%;
-  height: 30rem;
+  min-height: 30rem;
+  background: url("../images/store2.png") center no-repeat;
+  background-size: cover;
 }
 
 /* Section - Help Us */
@@ -576,7 +572,7 @@ footer p {
   }
 
   .add-padding-right {
-    padding-right: 10rem;
+    margin-right: 10rem;
   }
 
   .first {
@@ -587,7 +583,7 @@ footer p {
     order: 2;
   }
 
-  .store {
+  .store1, .store2 {
     min-height: 40rem;
   }
 
