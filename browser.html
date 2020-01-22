@@ -48,11 +48,68 @@
       </nav>
       <div id="map"></div>
         <script>
-          var map = L.map('map').setView([44.505833, 11.341667], 10);
+          var map = L.map('map').setView([44.505833, 11.341667], 13);
 
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
-          }).addTo(map);
+          L.esri.basemapLayer('Streets').addTo(map);
+
+
+          // Icons
+
+          var street = L.icon({
+            iconUrl: 'images/street-view.svg',
+            iconSize:     [30, 60], // size of the icon
+            iconAnchor:   [15, 40], // point of the icon which will correspond to marker's location
+            popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+          });
+
+          var classic = L.icon({
+            iconUrl: 'images/map-marker.svg',
+            iconSize:     [30, 60], // size of the icon
+            iconAnchor:   [15, 40], // point of the icon which will correspond to marker's location
+            popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+          });
+
+          // Markers
+          var piazzamaggiore = L.marker([44.49369, 11.34305], {icon : classic}).addTo(map).bindPopup("<b>Piazza Maggiore, BO</b><br>44.49369°, 11.34305°");
+          var sanpetronio = L.marker([44.492778, 11.343056], {icon : classic}).addTo(map).bindPopup("<b>Basilica di San Petronio, BO</b><br>44.492778°, 11.343056°");
+          var duetorri = L.marker([44.494167, 11.346667], {icon : classic}).addTo(map).bindPopup("<b>Le due Torri, BO</b><br>44.494167°, 11.346667°");
+          var santostefano = L.marker([44.491985, 11.348727], {icon : classic}).addTo(map).bindPopup("<b>Basilica di Santo Stefano, BO</b><br>44.491985°, 11.348727°");
+          var archiginnasio = L.marker([44.492174, 11.343491], {icon : classic}).addTo(map).bindPopup("<b>Archiginnasio, BO</b><br>44.492174°, 11.343491°");
+          var finestrella = L.marker([44.498576, 11.345222], {icon : classic}).addTo(map).bindPopup("<b>Finestrella di Via Piella, BO</b><br>44.498576°, 11.345222°");
+          var pinacoteca = L.marker([44.4977, 11.353469], {icon : classic}).addTo(map).bindPopup("<b>Pinacoteca Nazionale, BO</b><br>44.4977°, 11.353469°");
+          var sanluca = L.marker([44.479117, 11.298069], {icon : classic}).addTo(map).bindPopup("<b>Santuario della Madonna di San Luca, BO</b><br>44.479117°, 11.298069°");
+          var santamaria = L.marker([44.493398, 11.344617], {icon : classic}).addTo(map).bindPopup("<b>Santuario della Madonna della vita, BO</b><br>44.493398°, 11.344617°");
+          var giardinimargherita = L.marker([44.48431, 11.355896], {icon : classic}).addTo(map).bindPopup("<b>Giardini Margherita, BO</b><br>44.48431°, 11.355896°");
+          var mambo = L.marker([44.5025, 11.3369], {icon : classic}).addTo(map).bindPopup("<b>Museo di Arte Moderna MAMbo, BO</b><br>44.5025°, 11.3369°");
+          var certosa = L.marker([44.496389, 11.309444], {icon : classic}).addTo(map).bindPopup("<b>Cimitero monumentale della Certosa, BO</b><br>44.496389°, 11.309444°");
+          var torreprendiparte = L.marker([44.495975, 11.344775], {icon : classic}).addTo(map).bindPopup("<b>Torre dei Prendiparte, BO</b><br>44.495975°, 11.344775°");
+          var palazzoreenzo = L.marker([44.4943, 11.343169], {icon : classic}).addTo(map).bindPopup("<b>Palazzo Re Enzo, BO</b><br>44.4943°, 11.343169°");
+          var sanfrancesco = L.marker([44.495, 11.335278], {icon : classic}).addTo(map).bindPopup("<b>Basilica di San Francesco, BO</b><br>44.495°, 11.335278°");
+
+
+          //Geolocation
+
+          map.locate({setView: true, maxZoom: 16});
+
+          function onLocationFound(e) {
+            var radius = e.accuracy;
+
+            L.marker(e.latlng, {icon : street}).addTo(map)
+            .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+            L.circle(e.latlng, radius).addTo(map);
+          }
+
+          map.on('locationfound', onLocationFound);
+
+          function onLocationError(e) {
+            alert(e.message);
+          }
+
+          map.on('locationerror', onLocationError);
+
+
+          // Searchbox
 
           var searchControl = L.esri.Geocoding.geosearch().addTo(map);
 
@@ -61,12 +118,9 @@
           searchControl.on('results', function (data) {
             results.clearLayers();
             for (var i = data.results.length - 1; i >= 0; i--) {
-              results.addLayer(L.marker(data.results[i].latlng).bindPopup("<b>Voi siete qui</b><br>" + data.latlng));
+              results.addLayer(L.marker(data.results[i].latlng, {icon : street}).bindPopup("<b>Voi siete qui</b><br>" + data.latlng));
             }
           });
-
-          // Markers
-          var piazza_maggiore = L.marker([44.49369, 11.34305]).addTo(map).bindPopup("<b>Piazza Maggiore, BO</b><br>44.49369°, 11.34305°");
 
         </script>
     </header>
