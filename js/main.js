@@ -34,3 +34,86 @@ $(function(){
         $('.back-to-top').removeClass('active-top');
     }
 });
+
+// ==== Map ====
+const MAP = 'pk.eyJ1IjoibG9yZW56b21lbnRhIiwiYSI6ImNrNGI3MnNwdTBheDUzbm9nanlsbmtmZHQifQ.Ag_McrzQN8_QGxI7Bo9QYg';
+var position;
+var positionCoord;
+var destination;
+var destinationCoord;
+var routeControl;
+let options = {profile: 'mapbox/walking', language: 'it'}
+
+
+var map = L.map('map').setView([44.505833, 11.341667], 13);
+
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    accessToken: 'pk.eyJ1IjoibG9yZW56b21lbnRhIiwiYSI6ImNrNGI3MXRjbjBhdTgzbW14NnpqcHgyczUifQ.IrmWvBDIlTuzSi6qCrVUvA'
+}).addTo(map);
+
+
+// ==== Icons ====
+
+var userIcon = L.icon({
+  iconUrl: 'images/street-view.svg',
+  iconSize:     [30, 60], // size of the icon
+  iconAnchor:   [15, 40], // point of the icon which will correspond to marker's location
+  popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+});
+
+var markerIcon = L.icon({
+  iconUrl: 'images/map-marker.svg',
+  iconSize:     [30, 60], // size of the icon
+  iconAnchor:   [15, 40], // point of the icon which will correspond to marker's location
+  popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+});
+
+for ( var i=0; i < markers.length; ++i )
+{
+   var markerLat = markers[i].lat;
+   var markerLng = markers[i].lng;
+   var marker = L.marker( [markers[i].lat, markers[i].lng] ,  {icon: markerIcon})
+      .bindPopup('<a href="' + markers[i].url + '" target="_blank">' + markers[i].name + '</a>' + "<br>" + markers[i].lat + "°, " + markers[i].lng + "° <br><br><hr><br>" + '<a href="#clip">' + "Vai alla Clip!" + '</a>' )
+      .addTo( map )
+      marker.on('click', function(marker){
+            destinationCoord = this.getLatLng();
+            routeControl.setWaypoints([
+                positionCoord,
+                destinationCoord
+              ])
+        });
+}
+// ==== Geolocation and Routing ====
+
+map.locate({setView: true, maxZoom: 13});
+
+function onLocationFound(e) {
+    var radius = e.accuracy;
+
+    position = L.marker(e.latlng, {icon : userIcon}).addTo(map)
+        .bindPopup("Ti trovi entro " + radius + " metri da questo punto").openPopup();
+
+    positionCoord = e.latlng;
+
+    console.log(positionCoord);
+
+    L.circle(e.latlng, radius).addTo(map);
+
+
+
+    routeControl =  L.Routing.control({
+          routeWhileDragging: true,
+          router: new L.Routing.mapbox(MAP, options)
+        }).addTo(map);
+}
+
+map.on('locationfound', onLocationFound);
+
+function onLocationError(e) {
+    alert(e.message);
+}
+
+map.on('locationerror', onLocationError);
