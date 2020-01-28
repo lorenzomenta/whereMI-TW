@@ -416,6 +416,19 @@ header {
   box-shadow: none;
 }
 
+.scroll-to-clips {
+  line-height: 0;
+  margin: auto;
+  color: var(--main-white);
+  user-select: none;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.scroll-to-clips .main-btn {
+  margin-top: 0;
+}
+
 /* Section - Our Services Browser */
 .frame1{
   width: 100%;
@@ -496,13 +509,14 @@ footer p {
 #map {
 	position:absolute;
   left:2.5rem; right:2.5rem;
-  top:12.5rem; bottom:7.5rem;
+  top:7.5rem; bottom:7.5rem;
 	margin:auto;
 	max-width:100%;
-	max-height:100%;
+	max-height:80%;
 	overflow:hidden;
   z-index:0;
   text-align: left;
+
 }
 
 
@@ -622,6 +636,11 @@ footer p {
 }
 
 .main-text .main-btn {
+  opacity: 0;
+  animation: .5s fade 1s forwards;
+}
+
+.scroll-to-clips .main-btn {
   opacity: 0;
   animation: .5s fade 1s forwards;
 }

@@ -3,8 +3,7 @@ var markers = [
      "name": "Piazza Maggiore",
      "url": "https://it.wikipedia.org/wiki/Piazza_Maggiore",
      "lat": 44.49369,
-     "lng": 11.34305,
-     "latLng" : '44.49369, 11.34305'
+     "lng": 11.34305
   },
   {
      "name": "Basilica di San Petronio",
