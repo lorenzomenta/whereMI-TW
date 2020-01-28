@@ -39,6 +39,7 @@ $(function(){
 const MAP = 'pk.eyJ1IjoibG9yZW56b21lbnRhIiwiYSI6ImNrNGI3MnNwdTBheDUzbm9nanlsbmtmZHQifQ.Ag_McrzQN8_QGxI7Bo9QYg';
 var position;
 var positionCoord;
+var circle;
 var destination;
 var destinationCoord;
 var routeControl;
@@ -48,7 +49,6 @@ let options = {profile: 'mapbox/walking', language: 'it'}
 var map = L.map('map').setView([44.505833, 11.341667], 13);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     id: 'mapbox/streets-v11',
     accessToken: 'pk.eyJ1IjoibG9yZW56b21lbnRhIiwiYSI6ImNrNGI3MXRjbjBhdTgzbW14NnpqcHgyczUifQ.IrmWvBDIlTuzSi6qCrVUvA'
@@ -100,7 +100,7 @@ function onLocationFound(e) {
 
     console.log(positionCoord);
 
-    L.circle(e.latlng, radius).addTo(map);
+    circle = L.circle(e.latlng, radius).addTo(map);
 
 
 
@@ -117,3 +117,87 @@ function onLocationError(e) {
 }
 
 map.on('locationerror', onLocationError);
+
+//==== Geocoding ====
+
+// create geocode error box element
+  var geocodeErEl = document.createElement('div');
+  geocodeErEl.setAttribute('id', 'geocodeError');
+
+  // create close button for error box
+  var geocoderErCloseEl = document.createElement('input');
+  geocoderErCloseEl.setAttribute('id','errorCloseBtn');
+  geocoderErCloseEl.setAttribute('type','button');
+  geocoderErCloseEl.setAttribute('value', 'X');
+
+  // create paragraph element to contain error text
+  var geocodeErTextEl = document.createElement('p');
+  geocodeErTextEl.setAttribute('id','errorText');
+
+  // append elements to geocode error div
+  jQuery(geocodeErEl).append(geocoderErCloseEl);
+  jQuery(geocodeErEl).append(geocodeErTextEl);
+
+  // append elememnts to map
+  jQuery('#map').append(geocodeErEl);
+
+  // container for address search results
+  var addressSearchResults = new L.LayerGroup().addTo(map);
+
+  // OSM Geocoder
+  var osmGeocoder = new L.Control.OSMGeocoder({
+      collapsed: false,
+      position: 'bottomleft',
+      text: 'Cerca',
+      placeholder: 'Inserisci un indirizzo',
+      callback: function(results) {
+              // error box element
+              var geocodeErrorBox = jQuery('#geocodeError');
+              var geocodeErrorText = jQuery('#errorText');
+
+              // close error box if it is open
+              if (!geocodeErrorBox.css('display','none')) {
+                  geocodeErrorBox.hide();
+              }
+
+              // If no results are found, add a message to the screen
+              if (results.length == 0) {
+          // placeholder="" is key to selecting DOM element
+                  var searchText = jQuery('.leaflet-control-geocoder-form input[placeholder="Inserisci un indirizzo"]').val();
+                  // get search text or result text and put that in box
+                  geocodeErrorText.html('Nessun risultato per ' + searchText);
+                  geocodeErrorBox.show();
+                  return;
+        }
+
+              // clear previous geocode results
+              addressSearchResults.clearLayers();
+
+              // get coordinates for result
+              positionCoord = L.latLng(results[0].lat,results[0].lon);
+
+              if (position != undefined) {
+                    map.removeLayer(position);
+                    map.removeLayer(circle);
+              };
+
+              // create a marker for result
+              position = L.marker(positionCoord, {
+                  icon: userIcon
+              }).addTo(map)
+                  .bindPopup("Ti trovi qui").openPopup();
+
+              map.setView([results[0].lat,results[0].lon],13);
+
+              routeControl.setWaypoints([
+                  undefined,
+                  undefined
+                ])
+
+          }
+      }).addTo(map);
+
+  // add event listener to click event for error message close button
+  jQuery('#errorCloseBtn').click(function() {
+     jQuery('#geocodeError').hide();
+  })
