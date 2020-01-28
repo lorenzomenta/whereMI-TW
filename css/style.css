@@ -422,7 +422,9 @@ header {
   color: var(--main-white);
   user-select: none;
   width: 100%;
-  margin-bottom: 2rem;
+  border: 5px solid red;
+  margin-bottom: 5.5rem;
+  height: 10%;
 }
 
 .scroll-to-clips .main-btn {
@@ -509,10 +511,10 @@ footer p {
 #map {
 	position:absolute;
   left:2.5rem; right:2.5rem;
-  top:7.5rem; bottom:7.5rem;
+  top:2.5rem; bottom:7.5rem;
 	margin:auto;
 	max-width:100%;
-	max-height:80%;
+	max-height:70%;
 	overflow:hidden;
   z-index:0;
   text-align: left;
