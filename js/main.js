@@ -112,7 +112,7 @@ function onLocationFound(e) {
 map.on('locationfound', onLocationFound);
 
 function onLocationError(e) {
-    alert("Golocalizzazione non abilitata. Inserisci manualmente la tua positione");
+    alert("Geolocalizzazione non abilitata. Inserisci manualmente la tua posizione.");
 }
 
 map.on('locationerror', onLocationError);
