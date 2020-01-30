@@ -13,10 +13,9 @@
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
   <link rel="stylesheet" href="routing/leaflet-routing-machine.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
-  <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
-  <link rel='stylesheet' href='https://pamagic.org/maps/assets/leaflet/plugins/leaflet-osm-geocoder/Control.OSMGeocoder.css'>
-  <script src='https://pamagic.org/maps/assets/leaflet/plugins/leaflet-osm-geocoder/Control.OSMGeocoder.js'></script>
+  <script src="routing/leaflet-routing-machine.js"></script>
+  <link rel='stylesheet' href='geocoding/Control.OSMGeocoder.css'>
+  <script src='geocoding/Control.OSMGeocoder.js'></script>
 </head>
 <body>
   <div class="site-wrap">
@@ -45,38 +44,123 @@
     <h1 class="custom-font">Elenco</h1>
     <h2 class="custom-font-secondary">Delle clip</h2>
     <div class="row">
+
       <div class="column">
         <article class="card">
-          <h3 class="custom-font-secondary">Card 1</h3>
-          <p>Some text</p>
-          <p>Some text</p>
+          <div class="cardHeader">
+            <h3 class="custom-font-secondary">Card 1</h3>
+          </div>
+          <div class="cardBody">
+            <ul>
+              <li>
+                <span>
+                  <b>Lingua: </b>Italiano
+                </span>
+              </li>
+              <li>
+                <span>
+                  <b>Categoria: </b>Religione
+                </span>
+              </li>
+              <li style="height:7rem; overflow-y:auto; overflow-x: hidden;">
+                <span>
+                  <b>Descrizione: </b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="cardFooter">
+          </div>
         </article>
       </div>
 
       <div class="column">
         <article class="card">
-          <h3 class="custom-font-secondary">Card 2</h3>
-          <p>Some text</p>
-          <p>Some text</p>
+          <div class="cardHeader">
+            <h3 class="custom-font-secondary">Card 2</h3>
+          </div>
+          <div class="cardBody">
+            <ul>
+              <li>
+                <span>
+                  <b>Lingua: </b>Italiano
+                </span>
+              </li>
+              <li>
+                <span>
+                  <b>Categoria: </b>Religione
+                </span>
+              </li>
+              <li style="height:7rem; overflow-y:auto; overflow-x: hidden;">
+                <span>
+                  <b>Descrizione: </b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="cardFooter">
+          </div>
         </article>
       </div>
 
       <div class="column">
         <article class="card">
-          <h3 class="custom-font-secondary">Card 3</h3>
-          <p>Some text</p>
-          <p>Some text</p>
+          <div class="cardHeader">
+            <h3 class="custom-font-secondary">Card 3</h3>
+          </div>
+          <div class="cardBody">
+            <ul>
+              <li>
+                <span>
+                  <b>Lingua: </b>Italiano
+                </span>
+              </li>
+              <li>
+                <span>
+                  <b>Categoria: </b>Religione
+                </span>
+              </li>
+              <li style="height:7rem; overflow-y:auto; overflow-x: hidden;">
+                <span>
+                  <b>Descrizione: </b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="cardFooter">
+          </div>
         </article>
       </div>
 
       <div class="column">
         <article class="card">
-          <h3 class="custom-font-secondary">Card 4</h3>
-          <p>Some text</p>
-          <p>Some text</p>
+          <div class="cardHeader">
+            <h3 class="custom-font-secondary">Card 4</h3>
+          </div>
+          <div class="cardBody">
+            <ul>
+              <li>
+                <span>
+                  <b>Lingua: </b>Italiano
+                </span>
+              </li>
+              <li>
+                <span>
+                  <b>Categoria: </b>Religione
+                </span>
+              </li>
+              <li style="height:7rem; overflow-y:auto; overflow-x: hidden;">
+                <span>
+                  <b>Descrizione: </b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="cardFooter">
+          </div>
         </article>
       </div>
-    </div>
+
   </section>
 
     <div class="back-to-top">

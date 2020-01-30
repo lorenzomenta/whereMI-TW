@@ -34,7 +34,7 @@
     transition: all 0.2s ease;
 }
 
-.leaflet-control-container .leaflet-routing-container-hide .leaflet-routing-alt, 
+.leaflet-control-container .leaflet-routing-container-hide .leaflet-routing-alt,
 .leaflet-control-container .leaflet-routing-container-hide .leaflet-routing-geocoders {
     display: none;
 }
@@ -248,11 +248,15 @@
     margin-left: 10px !important;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 769px) {
     .leaflet-routing-container {
         margin: 0 !important;
         padding: 0 !important;
-        width: 100%;
+        width: 80%;
         height: 100%;
+    }
+
+    .leaflet-routing-alt, .leaflet-routing-geocoders, .leaflet-routing-error {
+        max-height: 100px;
     }
 }

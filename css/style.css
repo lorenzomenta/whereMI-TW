@@ -422,7 +422,7 @@ header {
   color: var(--main-white);
   user-select: none;
   width: 100%;
-  margin-bottom: 5.5rem;
+  margin-bottom: 5rem;
   height: 10%;
 }
 
@@ -490,6 +490,10 @@ header {
 
 /* Clips Section */
 
+#clips h1,h2 {
+  text-align: center;
+}
+
 .card .custom-font-secondary {
   color: var(--main-white);
   margin-bottom: 2rem;
@@ -512,6 +516,28 @@ header {
   clear: both;
 }
 
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--main-dark-grey);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-white);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
 /* Responsive columns */
 @media screen and (max-width: 600px) {
   .column {
@@ -530,9 +556,34 @@ header {
   color: var(--main-white);
 }
 
-#clips {
+.cardHeader {
+  padding-bottom: 1rem;
   text-align: center;
 }
+
+.cardBody {
+  text-align: left;
+  background-color: var(--main-white);
+  text-align:left;
+}
+
+.cardBody ul {
+  border: 0 solid silver;
+  border-width: 0 0 1px 1px;
+}
+
+.cardBody li {
+  border: 0 solid silver;
+  border-width: 1px 1px 0 0;
+  padding:.5em;
+  color: black;
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  list-style-type: none;
+  text-align: left;
+}
+
+
 
 /* Footer */
 footer {
@@ -666,6 +717,7 @@ footer p {
   .btn-info {
     font-size: 1.8rem;
   }
+
 }
 
 /* Animations */
@@ -734,7 +786,7 @@ footer p {
     margin: auto;
     padding: 25px;
     width: 250px;
-    height: 150px;
+    height: 220px;
     background: #fff;
     border: 2px solid #000;
     font-weight: bold;

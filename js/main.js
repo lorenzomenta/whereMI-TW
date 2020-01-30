@@ -96,6 +96,19 @@ routeControl =  L.Routing.control({
 map.locate({setView: true, maxZoom: 13});
 
 function onLocationFound(e) {
+
+    if (position != undefined) {
+          map.removeLayer(position);
+          if (circle != undefined) {
+                map.removeLayer(circle);
+          }
+    };
+
+    routeControl.setWaypoints([
+          undefined,
+          undefined
+    ])
+
     var radius = e.accuracy;
 
     position = L.marker(e.latlng, {icon : userIcon}).addTo(map)
@@ -112,7 +125,19 @@ function onLocationFound(e) {
 map.on('locationfound', onLocationFound);
 
 function onLocationError(e) {
-    alert("Geolocalizzazione non abilitata. Inserisci manualmente la tua posizione.");
+  // error box element
+  var geocodeErrorBox = jQuery('#geocodeError');
+  var geocodeErrorText = jQuery('#errorText');
+
+  // close error box if it is open
+  if (!geocodeErrorBox.css('display','none')) {
+      geocodeErrorBox.hide();
+  }
+
+  // get search text or result text and put that in box
+  geocodeErrorText.html('Geolocalizzazione non abilitata. Inserisci un indirizzo di partenza nel box sottostante.');
+  geocodeErrorBox.show();
+  return;
 }
 
 map.on('locationerror', onLocationError);
@@ -164,7 +189,7 @@ map.on('locationerror', onLocationError);
           // placeholder="" is key to selecting DOM element
                   var searchText = jQuery('.leaflet-control-geocoder-form input[placeholder="Inserisci un indirizzo"]').val();
                   // get search text or result text and put that in box
-                  geocodeErrorText.html('Nessun risultato per ' + searchText);
+                  geocodeErrorText.html('Nessun risultato trovato per ' + searchText);
                   geocodeErrorBox.show();
                   return;
         }
