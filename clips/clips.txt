@@ -1,0 +1,517 @@
+var Piazza_Maggiore = [
+
+    {
+      descrizione:"Piazza Maggiore è la piazza principale di Bologna, misura 115 metri in lunghezza e 60 metri in larghezza, ed è circondata dai più importanti edifici della città medievale.",
+      geoloc:"",
+      purpose:"what",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"1"
+    },
+
+    {
+      descrizione:"La parte centrale della piazza è caratterizzata da una piattaforma pedonale. L'accesso è vietato alle autovetture ma è facilmente accessibile a piedi o in bicicletta.",
+      geoloc:"",
+      purpose:"how",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"1"
+    },
+
+    {
+      descrizione:"L'area che adesso conosciamo come Piazza Maggiore, che in realtà nella toponomastica è senza nome, venne costruita a partire dal 1200 esatto, quando i bolognesi sentirono l'esigenza di avere spazio da adibire a mercato e non solo. I molti edifici popolari, fra cui anche diverse torri, che sorgevano nella zona furono acquistati dal Comune e poi abbattuti. È una delle primissime piazze, se non la prima, ad essere costruita in Italia dopo la caduta dell'impero romano, quando le "piazze" erano le basiliche e i fori. È proprio in questo periodo che in Italia si ritorna al concetto di "piazza" come luogo pubblico d'incontro e aggregazione.",
+      geoloc:"",
+      purpose:"why",
+      language:"ita",
+      content:"his",
+      audience:"gen",
+      detail:"2"
+    }
+
+]
+
+var Basilica_San_Petronio = [
+
+    {
+      descrizione:"La basilica di San Petronio è la chiesa più grande di Bologna: domina l'antistante piazza Maggiore e, nonostante sia ampiamente incompiuta, è una delle chiese più vaste d'Europa.",
+      geoloc:"",
+      purpose:"what",
+      language:"ita",
+      content:"rel",
+      audience:"gen",
+      detail:"1"
+    },
+
+    {
+      descrizione:"L'accesso alla basilica è gratuito ed è consentito tra le ore 07:045 e le 18:00. Non è possibile visitare la basilica durante le celebrazioni liturgiche.",
+      geoloc:"",
+      purpose:"how",
+      language:"ita",
+      content:"rel",
+      audience:"gen",
+      detail:"2"
+    },
+
+    {
+      descrizione:"Dedicata a San Petronio, il santo patrono della città, la sua fondazione risale al 7 giugno 1390 con la posa della prima pietra in una solenne processione. Nel 1388, il Consiglio dei Seicento del Comune di Bologna, in riconoscimento dell'impegno speso dal Vescovo Petronio (V secolo), elevato al rango di Patrono della città nel 1253, decise di iniziare la costruzione di un tempio a lui dedicato.
+      Si tratta dell'ultima grande opera tardo gotica d'Italia, iniziata poco dopo il Duomo di Milano",
+      geoloc:"",
+      purpose:"why",
+      language:"ita",
+      content:"his",
+      audience:"gen",
+      detail:"2"
+    }
+
+]
+
+var Due_Torri = [
+
+    {
+      descrizione:"Le due torri (simbolo della città), entrambe pendenti, sono situate all'incrocio tra le vie che portavano alle cinque porte dell'antica cerchia di mura "dei torresotti".",
+      geoloc:"",
+      purpose:"what",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"1"
+    },
+
+    {
+      descrizione:"L'accesso alla torre degli Asinelli costa 5 euro e dura 45 minuti. Il primo turno inizia alle ore 09:30, l' ultimo alle ore 18:30",
+      geoloc:"",
+      purpose:"how",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"2"
+    },
+
+    {
+      descrizione:"I nomi di Asinelli (la maggiore) e Garisenda (la minore) derivano dalle famiglie a cui tradizionalmente se ne attribuisce la costruzione, fra il 1109 ed il 1119. In realtà la scarsezza di documenti risalenti ad epoche così remote rende meno certa l'origine delle torri: per quello che riguarda la famiglia degli Asinelli, ad esempio, vengono citati in associazione alla famosa torre per la prima volta solo nel 1185, quasi settant'anni dopo la data presunta di costruzione.",
+      geoloc:"",
+      purpose:"why",
+      language:"ita",
+      content:"his",
+      audience:"gen",
+      detail:"2"
+    }
+
+]
+
+var Basilica_Santo_Stefano = [
+
+    {
+      descrizione:"La basilica di Santo Stefano è un complesso di edifici di culto di Bologna. Si affaccia sull'omonima piazza ed è conosciuto anche come il complesso delle "Sette Chiese". Ha la dignità di basilica minore.",
+      geoloc:"",
+      purpose:"what",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"1"
+    },
+
+    {
+      descrizione:"L'ingresso è a offerta libera. La basilica è aperta dalle 07.30 alle 12.30 e dalle 14.30 alle 19.30.  Ogni lunedì (non festivo) la Basilica aprirà alle 17.30 fino alle 19.30",
+      geoloc:"",
+      purpose:"",
+      language:"",
+      content:"",
+      audience:"",
+      detail:""
+    },
+
+    {
+      descrizione:"La tradizione indica san Petronio come ideatore della basilica, che avrebbe dovuto imitare il Santo Sepolcro di Gerusalemme, edificata sopra un preesistente tempio dedicato a Iside. Le origini degli edifici sono comunque molto antiche: la chiesa di san Giovanni Battista o del Santo Crocefisso risale all'VIII secolo, la chiesa del Santo Sepolcro al V secolo: qui in una cella sormontata da un altare con pulpito era situata la tomba di san Petronio, vescovo di Bologna dal 431 al 450 e protettore della città",
+      geoloc:"",
+      purpose:"why",
+      language:"ita",
+      content:"his",
+      audience:"gen",
+      detail:"2"
+    }
+
+]
+
+var piazzamaggiore = [
+
+    {
+      descrizione:"L'Archiginnasio di Bologna è uno dei palazzi più significativi della città di Bologna: ubicato nel cuore del centro storico, fu sede dell'antica Università ed è ora sede della Biblioteca Comunale dell'Archiginnasio.",
+      geoloc:"",
+      purpose:"what",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"1"
+    },
+
+    {
+      descrizione:"Il palazzo è aperto dalle ore 10:00 alle ore 18:00 nei giorni feriali, mentre nei giorni festivi dalle ore 10:00 alle ore 14:00.",
+      geoloc:"",
+      purpose:"how",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"2"
+    },
+
+    {
+      descrizione:"La costruzione dell'Archiginnasio data dal XVI secolo, quando l'area di Piazza Maggiore fu drasticamente ristrutturata per volere papale: negli stessi anni fu costruita tra l'altro anche la fontana del Nettuno.
+                    La realizzazione dell'Archiginnasio fu commissionata da papa Pio IV per mezzo del Cardinale Legato Carlo Borromeo e del suo vice Pier Donato Cesi che assegnarono il progetto ad Antonio Morandi (detto il Terribilia), il quale terminò il lavoro di costruzione tra il 1562 ed il 1563. Obiettivo del progetto era la realizzazione di un luogo unitario dove svolgere gli insegnamenti universitari relativi alle diverse discipline, prima di allora dispersi tra sedi e luoghi diversi.",
+      geoloc:"",
+      purpose:"why",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"2"
+    }
+
+]
+
+var Finestrella = [
+
+    {
+      descrizione:"Quest'angolo di città è noto come "la piccola Venezia". Affacciandosi fra i palazzi, si può vedere scorrere uno dei pochi tratti d'acqua che tra i primi del Novecento e il dopoguerra non fu ricoperto di asfalto.",
+      geoloc:"",
+      purpose:"what",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"1"
+    },
+
+    {
+      descrizione:"Passando sotto Porta Govese o Torresotto dei Piella si giunge alla celebre Finestrella sul Canale delle Moline e al ponte sul canale, entrambi con affaccio.",
+      geoloc:"",
+      purpose:"how",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"1"
+    },
+
+    {
+      descrizione:"Il canale delle Moline è la prosecuzione del canale di Reno. Per buona parte del suo itinerario il canale delle Moline è rinchiuso tra le case, come si vede dalla Finestrella, e per questo in passato è rimasto a lungo nascosto alla vista. Di recente sono stati riaperti gli affacci sui ponti delle vie Oberdan e Malcontenti, che si affiancano alla suggestiva finestrella di via Piella.",
+      geoloc:"",
+      purpose:"why",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"1"
+    }
+
+]
+
+var Pinacoteca = [
+
+    {
+      descrizione:"La Pinacoteca Nazionale di Bologna conserva dipinti che permettono di seguire la storia della pittura bolognese, dagli inizi del Trecento fino alla fine del Settecento, concentrandosi sui capolavori della "scuola bolognese" del Seicento.",
+      geoloc:"",
+      purpose:"why",
+      language:"ita",
+      content:"his",
+      audience:"gen",
+      detail:"2"
+    },
+
+    {
+      descrizione:"L'orario di apertura è dalle 08:30 alle 19:30. Il costo del biglietto è variabile e la Pinacoteca è chiusa tutti i lunedì.",
+      geoloc:"",
+      purpose:"",
+      language:"",
+      content:"",
+      audience:"",
+      detail:""
+    },
+
+    {
+      descrizione:"La Pinacoteca Nazionale di Bologna è una pinacoteca italiana, con sede a Bologna in via delle Belle Arti 56 nell'ex noviziato gesuita di Sant'Ignazio al quartiere universitario, nello stesso edificio storico che ospita l'Accademia di belle arti. Il museo offre una vasta panoramica della pittura emiliana dal XIII al XVIII secolo, tuttavia non mancano testimonianze fondamentali di artisti non bolognesi che ebbero contatti con la città.",
+      geoloc:"",
+      purpose:"what",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"1"
+    }
+
+]
+
+var Santuario_San_Luca = [
+
+    {
+      descrizione:"Il santuario della Madonna di San Luca è una basilica dedicata al culto cattolico mariano e si eleva sul colle della Guardia, uno sperone in parte boschivo a sud-ovest del centro storico di Bologna. È un importante santuario nella storia della città, fin dalle sue origini meta di pellegrinaggi per venerare l'icona della Vergine col Bambino detta "di San Luca".",
+      geoloc:"",
+      purpose:"what",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"1"
+    },
+
+    {
+      descrizione:"Il santuario è raggiungibile da porta Saragozza attraverso una lunga e caratteristica via porticata, che scavalca via Saragozza con il monumentale Arco del Meloncello (1732) per poi salire ripidamente fino al santuario. L'ingresso è gratuito, ed è consentito negli orari tra le 08.30 e le 19.30.",
+      geoloc:"",
+      purpose:"how",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"2"
+    },
+
+    {
+      descrizione:"La storia del santuario è legata all'icona custodita al suo interno, che diede origine alla leggenda sulla fondazione del santuario stesso e ne determinò la fortuna nei secoli, facendone una meta di pellegrinaggi.",
+      geoloc:"",
+      purpose:"why",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"1"
+    }
+
+]
+
+var Santuario_Santa_Maria = [
+
+    {
+      descrizione:"Di antica fondazione, venne ricostruito nel 1687-1690 da Giovanni Battista Bergonzoni, che impostò la pianta centrale ellittica, dotata un secolo dopo di cupola di Giuseppe Tubertini (1787), su probabile progetto del Terribilia. La facciata risale al 1905.",
+      geoloc:"",
+      purpose:"what",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"1"
+    },
+
+    {
+      descrizione:"L'ingresso è consentito da martedì a domenica tra le ore 10.00 e le 19.00. Il biglietto ha un costro di 5 euro.",
+      geoloc:"",
+      purpose:"how",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"2"
+    },
+
+    {
+      descrizione:"La chiesa è soprattutto nota per conservare il gruppo fittile del Compianto sul Cristo morto di Niccolò dell'Arca, capolavoro della scultura quattrocentesca di ineguagliata forza drammatica. Esso, composto da sei figure a grandezza naturale più il Cristo giacente, risale al 1463 ed è attualmente collocato nella cappella a destra dell'altare maggiore.
+      Si segnalano anche, nella cupola, Le quattro Sibille: Cumana, Frisia, Eritrea e Persica, opera dello scultore forlivese Luigi Acquisti.",
+      geoloc:"",
+      purpose:"why",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"2"
+    }
+
+]
+
+var Giardini_Margherita = [
+
+    {
+      descrizione:"I giardini Margherita sono il principale parco pubblico di Bologna, e si estendono per 26 ettari di terreno.",
+      geoloc:"",
+      purpose:"what",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"1"
+    },
+
+    {
+      descrizione:"L'accesso al parco è completamente gratuito, ed è consentito dalle ore 07:00 alle 24:00. Ha inoltre ben 3 accessi: il primo da Via Santa Chiara, il seondo da Via Sabbioni, e l'ultimo da Porta Castiglione",
+      geoloc:"",
+      purpose:"how",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"1"
+    },
+
+    {
+      descrizione:"Nella piazzetta principale del parco, per molti anni punto d'arrivo del Giro dell'Emilia, vi è una palazzina utilizzata per parecchi anni dal Comune come Biblioteca dei Ragazzi. Negli anni sessanta un gruppo di astrofili, autorizzati dal Comune, costruì sul terrazzo un piccolo osservatorio astronomico, tuttora esistente. All'interno dei giardini è stato inoltre creato dal WWF uno stagno didattico per i bambini delle scuole elementari, che ricostruisce la flora e la fauna tipiche di un acquitrino.",
+      geoloc:"",
+      purpose:"why",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"2"
+    }
+
+]
+
+var MAMbo= [
+
+    {
+      descrizione:"Il Museo d'arte moderna di Bologna (abbreviato anche in MAMbo) è uno dei principali musei italiani di arte moderna e contemporanea. È sede dell'Istituzione Bologna Musei, orientata alla ricerca artistica contemporanea. Ospita sia collezioni permanenti che mostre temporanee. All'interno si trovano una biblioteca, una libreria e un bar/ristorante.",
+      geoloc:"",
+      purpose:"what",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"2"
+    },
+
+    {
+      descrizione:"E' aperto tutti i giorni dalle ore 10.00 alle ore 18.30, il giovedì, con variazione di orario, tra le ore 10.00 e le 22.00. E' però chiuso il lunedì.",
+      geoloc:"",
+      purpose:"how",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"2"
+    },
+
+    {
+      descrizione:"Il progetto di recupero e di trasformazione nella nuova sede del MAMbo prende avvio nella seconda metà degli anni Novanta e segue diverse fasi - demolizione, recupero e consolidamento strutturale, nuova costruzione degli spazi interni - avendo sempre cura di rispettare e valorizzare le caratteristiche architettoniche preesistenti. L'intervento, in origine inserito nel master plan ideato da Aldo Rossi, è stato realizzato dal Comune di Bologna tramite la società Finanziaria Bologna Metropolitana, con la collaborazione dello Studio Arassociati di Milano. Al termine della ristrutturazione, il MAMbo con i suoi 9.500 metri quadrati diviene uno dei musei italiani più importanti dedicati al contemporaneo.",
+      geoloc:"",
+      purpose:"why",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"3"
+    }
+
+]
+
+var Cimitero_Certosa = [
+
+    {
+      descrizione:"Il cimitero monumentale della Certosa di Bologna si trova appena fuori dal cerchio delle mura della città, vicino allo stadio Renato Dall'Ara, ai piedi del colle della Guardia dove si trova il santuario della Madonna di San Luca.",
+      geoloc:"",
+      purpose:"what",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"1"
+    },
+
+    {
+      descrizione:"Il cimitero è aperto tutti i giorni dalle ore 08:00 alle ore 18:00.",
+      geoloc:"",
+      purpose:"how",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"1"
+    },
+
+    {
+      descrizione:"Il cimitero comunale fu istituito nel 1801 riutilizzando le preesistenti strutture della Certosa di San Girolamo di Casara, fondata a metà del Trecento, soppressa nel 1797 da Napoleone, e di cui è sopravvissuta la Chiesa di San Girolamo. La forte passione della nobiltà e della borghesia per la costruzione dei sepolcri familiari trasformò la Certosa in un vero e proprio “museo all'aria aperta”, tappa del grand tour italiano.",
+      geoloc:"",
+      purpose:"why",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"2"
+    }
+
+]
+
+var Torre_Prendiparte = [
+
+    {
+      descrizione:"La Torre dei Prendiparte (anche detta Torre Coronata) è una delle circa 20 torri gentilizie ancora esistenti nel centro storico della città di Bologna.",
+      geoloc:"",
+      purpose:"what",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"1"
+    },
+
+    {
+      descrizione:"Il prezzo a notte, per soggiornare nella torre dei Prendiparte varia tra i 10 e i 100 euro in base alla stagione.",
+      geoloc:"",
+      purpose:"how",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"2"
+    },
+
+    {
+      descrizione:"La famiglia guelfa dei Prendiparte è ricordata tra quelle nobili e di rilievo della città di Bologna dal 1154. Due membri della famiglia furono consoli di Bologna nel XII secolo, mentre nel XIII i Prendiparte furono chiamati per 13 volte a ricoprire il ruolo di podestà in varie città italiane.
+      La torre fu venduta una prima volta nel 1293 per 500 lire, poi i Prendiparte ne rientrarono in possesso. La lasciarono definitivamente nel '400, quando passò alla famiglia Fabruzzi. Nel Cinquecento passò alla Chiesa e, tra il 1751 e il 1796, fu carcere della curia. Sulle pareti delle tre celle (situate nei piani intermedi) restano varie iscrizioni incise dai prigionieri, tra cui quella di un certo Angelo Rizzoli "calcerato per avere ingravidato due sorele", come scrive egli stesso.
+      Oggi la torre ospita un bed & breakfast.",
+      geoloc:"",
+      purpose:"why",
+      language:"ita",
+      content:"his",
+      audience:"gen",
+      detail:"3"
+    }
+
+]
+
+var Palazzo_Re_Enzo = [
+
+    {
+      descrizione:"Il palazzo Re Enzo è un palazzo storico di Bologna risalente al XIII secolo.
+      Fu costruito tra il 1244 e il 1246 per volere del podestà Filippo Ugoni come ampliamento degli edifici comunali del Palazzo del Podestà e per questo chiamato Palatium Novum, ma le sue vicende storiche l'hanno da sempre legato alla figura di Re Enzo di Sardegna.",
+      geoloc:"",
+      purpose:"what",
+      language:"ita",
+      content:"his",
+      audience:"gen",
+      detail:"3"
+    },
+
+    {
+      descrizione:"Palazzo Re Enzo si trova in Piazza del Nettuno 1, a pochi passi dal Piazza Maggiore, ed è facilmente raggiungibile da qualsiasi punto della città attraverso numerosi mezzi pubblici. Ogni anno il palazzo ospita numerosi eventi.",
+      geoloc:"",
+      purpose:"how",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"2"
+    },
+
+    {
+      descrizione:"Numerose sono le leggende divulgate dai cronisti a proposito della cattura e della prigionia di re Enzo.
+      Si parla di una mancata fuga dal castello di Anzola dell'Emilia prima ancora che il re venisse portato a Bologna e successivamente di un riscatto che il padre avrebbe pagato ai bolognesi, col quale si sarebbe potuta erigere tutta la cerchia muraria della città ma che i bolognesi rifiutarono.
+      Pare che durante la prigionia Re Enzo passasse il giorno insieme ad altri prigionieri ma durante la notte venisse isolato in una gabbia appesa al soffitto e sorvegliato a vista.",
+      geoloc:"",
+      purpose:"why",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"3"
+    }
+
+]
+
+var Basilica_San_Francesco = [
+
+    {
+      descrizione:"La basilica di San Francesco è una chiesa bolognese del XIII secolo dedicata a san Francesco d'Assisi di proprietà dell'Ordine dei frati minori conventuali. Nel novembre del 1935 papa Pio XI l'ha elevata alla dignità di basilica minore.",
+      geoloc:"",
+      purpose:"what",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"2"
+    },
+
+    {
+      descrizione:"La basilica è aperta tutti i giorni dalle ore 06:45 alle ore 12, e dalle ore 15:30 alle 19:00.",
+      geoloc:"",
+      purpose:"how",
+      language:"ita",
+      content:"none",
+      audience:"gen",
+      detail:"2"
+    },
+
+    {
+      descrizione:"San Francesco giunse a Bologna nel 1222 e la sua predica determinò un decisivo interesse verso il francescanesimo. I francescani però, tramite l'opera di Bernardo di Quintavalle, avevano ottenuto da Nicolò Pepoli già dal 1213, la modesta casa di Santa Maria delle Pugliole, la quale sarà il primo insediamento francescano a Bologna. Qui i frati rimasero fino al 1236, anno in cui, per interessamento di papa Gregorio IX e per la concessione delle autorità civili, ebbero la possibilità di avviare la costruzione del grande complesso che, fin dalle sue fondazioni, ebbe carattere di monumentalità.",
+      geoloc:"",
+      purpose:"why",
+      language:"ita",
+      content:"his",
+      audience:"gen",
+      detail:"2"
+    }
+
+]
